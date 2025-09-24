@@ -1,0 +1,17 @@
+{
+  "name": "chatmaneiro",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "server:dev": "dotnet watch --project server",
+    "web:dev": "npm --prefix web run dev",
+    "web:lint": "npm --prefix web run lint",
+    "web:test": "npm --prefix web run test",
+    "web:build": "npm --prefix web run build",
+    "dev": "npm-run-all --parallel server:dev web:dev",
+    "postinstall": "node ./scripts/install-web.mjs"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
